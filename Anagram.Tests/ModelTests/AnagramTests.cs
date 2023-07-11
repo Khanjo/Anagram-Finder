@@ -38,5 +38,13 @@ namespace Anagrams.Tests
             char[] wordArray = Anagram.CreateArray(newAnagram.Word);
             Assert.IsInstanceOfType(wordArray, typeof(Array));
         }
+        [TestMethod]
+        public void CreateAnagrams_CreatesStringsFromCharArray_String()
+        {
+            Anagram newAnagrams = new Anagram("cat");
+            string[] output = Anagram.GetAnagrams(newAnagrams.Word, 0, 2);
+            string[] cat = { "cat", "cta", "act", "atc", "tac", "tca" };
+            Assert.AreEqual(output, cat);
+        }
     }
 }
