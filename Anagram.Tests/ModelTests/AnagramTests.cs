@@ -44,7 +44,7 @@ namespace Anagrams.Tests
             Anagram newAnagrams = new Anagram("cat");
             string[] output = Anagram.GetAnagrams(newAnagrams.Word, 0, 2);
             string[] cat = { "cat", "cta", "act", "atc", "tac", "tca" };
-            Assert.AreEqual(output, cat);
+            Assert.AreEqual(cat, output);
         }
     }
 }
