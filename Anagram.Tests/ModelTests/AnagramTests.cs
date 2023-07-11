@@ -36,7 +36,7 @@ namespace Anagrams.Tests
             string input = "hello";
             Anagram newAnagram = new Anagram(input);
             char[] wordArray = Anagram.CreateArray(newAnagram.Word);
-            Assert.IsInstanceOfType(Array, wordArray);
+            Assert.IsInstanceOfType(wordArray, typeof(Array));
         }
     }
 }
